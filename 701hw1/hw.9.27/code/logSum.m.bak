@@ -1,0 +1,10 @@
+function [ sumX ] = logSum( X )
+    maxLogp = max(X);
+    numX = size(X,1);
+    tmp = 0;
+    for i=1:numX,
+            tmp += exp(X(i) - maxLogp);
+    end;
+    sumX = maxLogp + log(tmp) ;  
+end
+
